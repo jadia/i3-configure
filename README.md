@@ -80,7 +80,7 @@ Run using `$mod+n`
 Put terminal and the application in the same workspace in tiling mode.
 
 ```bash
-xprop
+xprop | grep WM_CLASS
 ```
 
 The mouse cursor will change to a cross(+), click on the window of the application to get it's **Class**.
