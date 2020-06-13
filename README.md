@@ -37,6 +37,16 @@ EndSection
 Logout for changes to appear.
 [Source](https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/)
 
+
+## Media control keys
+
+Using `playerctl` to control play-pause, next, previous features present on F5, F6 and F7 keys.
+
+```bash
+wget https://github.com/altdesktop/playerctl/releases/download/v2.1.1/playerctl-2.1.1_amd64.deb
+sudo apt install -f ./playerctl-2.1.1_amd64.deb
+```
+
 ## Make brightness control work again
 
 ```vim
