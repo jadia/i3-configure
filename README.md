@@ -17,7 +17,8 @@ Copy the config file to `~/.config/i3/`
 Check if `/etc/X11/xorg.conf.d/` directory exists or not. If not, create one.
 
 ```bash
-vim /etc/X11/xorg.conf.d/90-touchpad.conf
+sudo mkdir -p /etc/X11/xorg.conf.d/
+sudo vim /etc/X11/xorg.conf.d/90-touchpad.conf
 ```
 
 Add the following lines:
@@ -38,6 +39,9 @@ Logout for changes to appear.
 [Source](https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/)
 
 
+## Volume key
+
+
 ## Media control keys
 
 Using `playerctl` to control play-pause, next, previous features present on F5, F6 and F7 keys.
@@ -48,6 +52,11 @@ sudo apt install -f ./playerctl-2.1.1_amd64.deb
 ```
 
 ## Make brightness control work again
+
+Install `xbacklight`
+```bash
+sudo apt install -y xbacklight
+```
 
 ```vim
 sudo find /sys/ -type f -iname '*brightness*'
@@ -107,4 +116,18 @@ vim ~/.config/i3/config
 
 ```vim
 assign [class="Google-chrome"] $ws2
+```
+
+
+## Find the keycode to use in config file
+
+Use below command. Focus the white window and Press the key you want to identify.
+```bash
+xev
+```
+
+If it gives a Keystroke code then run below command to find which key has what code.
+
+```bash
+xmodmap -pke
 ```
